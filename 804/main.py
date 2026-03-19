@@ -16,10 +16,14 @@ A, B, C, D = map(int, input().split())
 #野菜の個数を変数で定義する。
 limit_vegetables = A
 #肉を変数で定義する。#野菜1個につき、C個の肉が必要。現時点ではB個有るから
-limit_meat = B / C
+limit_meat = B // C
 #摂取量の最大数 野菜Aを食べると、肉はA*C個食べるので
 #合計は、A+AC=A(1+C)個とできる。
 #合計値はDより少ないことが条件
-limit_stomach = D / (1+C)
+limit_stomach = D // (1+C)
 
+#条件提起した3つを全て満たす必要があlあるので
+answer = min(limit_vegetables, limit_meat, limit_stomach)
+
+print(answer)
 
