@@ -31,5 +31,16 @@ for i in range(3):
             #a2とb2が最大か最小かが必要。
             #Aの場合
             kado_A = (A[1] == max(A) or A[1] == min(A))
+            #Bの場合
             kado_B = (B[1] == max(B) or B[1] == min(B))
             
+            #A, Bともに門松列なら"Yes"、それ以外なら"No"とする。
+            if kado_A and kado_B:
+                print("Yes")
+                exit()
+
+#リストを元の順番に戻しておく。
+A[i], B[j] = B[j], A[i]
+
+#門松列でなかったら、Noと出力する。
+print("No")
