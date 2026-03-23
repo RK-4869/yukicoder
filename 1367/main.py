@@ -20,3 +20,8 @@ for char in got:
     #今見ているgotの文字列が現在と同じものか　かつ　全部確認できていないものとしたら
     if check_s < len(s) and char == s[check_s]:
         check_s = check_s +1
+
+if check_s == len(s):
+    print("Yes")
+else:
+    print("No")
