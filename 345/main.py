@@ -46,6 +46,6 @@ for i in range(N):
 #チワワが見つからなかった場合の条件分岐が必要そう。
 if len(lengths) == 0:
     print(-1)
-#見つかった場合、最小値の文字列を出力指せる。
+#見つかった場合、最小値の文字列を出力させる。
 else:
     print(min(lengths))
