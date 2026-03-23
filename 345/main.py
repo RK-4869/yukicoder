@@ -13,3 +13,40 @@
 #まずsがtxtファイルから標準入力できるかを試す。
 s = input()
 print(s)
+
+#次に長さを求めたいので、length関数を使用して出力してみる。
+N = len(s)
+print(N)
+#長さと標準出力まで書けた。
+#見つけることのできるチワワの長さをlengthsとして[]で表してみる
+lengths = []
+
+#最初にcが含まれている時の条件分岐を作成してみる。
+for i in range(N):
+    #sの中のi番目にcが含まれていると白田
+    if s[i] == "c":
+        i += 1
+        
+        #次に最初のwが含まれているか確認する。
+        for j in range(i, N):
+            if s[j] == "w":
+                j += 1
+                #その後に、最後のwが含まれているかを確認する。
+                for k in range(j, N):
+                    if s[k] == "w":
+                        #ここまでif文でみつけられたと仮定して、チワワの長さを表しておくと
+                        cww = k - i +1
+                        #序盤に設定したlengthsを用いると、
+                        lengths.append(cww)
+                        #これでbreakする。
+                        break
+                    else:
+                        continue
+                    break
+
+#チワワが見つからなかった場合の条件分岐が必要そう。
+if len(lengths) == 0:
+    print(-1)
+#見つかった場合、最小値の文字列を出力指せる。
+else:
+    print(len(lengths))
