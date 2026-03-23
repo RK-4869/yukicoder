@@ -12,11 +12,9 @@
 
 #まずsがtxtファイルから標準入力できるかを試す。
 s = input()
-print(s)
 
 #次に長さを求めたいので、length関数を使用して出力してみる。
 N = len(s)
-print(N)
 #長さと標準出力まで書けた。
 #見つけることのできるチワワの長さをlengthsとして[]で表してみる
 lengths = []
@@ -49,4 +47,4 @@ if len(lengths) == 0:
     print(-1)
 #見つかった場合、最小値の文字列を出力指せる。
 else:
-    print(len(lengths))
+    print(min(lengths))
