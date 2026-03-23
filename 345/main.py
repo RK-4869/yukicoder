@@ -23,23 +23,24 @@ lengths = []
 for i in range(N):
     #sの中のi番目にcが含まれていると白田
     if s[i] == "c":
-        i += 1
+        #cww_foundに関してFalse文を入れておく。
+        cww_found = False
         
         #次に最初のwが含まれているか確認する。
         for j in range(i, N):
             if s[j] == "w":
-                j += 1
                 #その後に、最後のwが含まれているかを確認する。
-                for k in range(j, N):
+                for k in range(j+1, N):
                     if s[k] == "w":
                         #ここまでif文でみつけられたと仮定して、チワワの長さを表しておくと
                         cww = k - i +1
                         #序盤に設定したlengthsを用いると、
                         lengths.append(cww)
+                        #True文を入れてみる。
+                        cww_found = True
                         #これでbreakする。
                         break
-                    else:
-                        continue
+                if cww_found:
                     break
 
 #チワワが見つからなかった場合の条件分岐が必要そう。
