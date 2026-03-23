@@ -25,3 +25,11 @@ for i in range(3):
     for j in range(3):
         #AとBの左右を入れ替えてみる。
         A[i], B[j] = B[j], A[i]
+        
+        #まずリスト内の3つの数字がそれぞれ異なるかどうかの判別をしたい。
+        if len(set(A))==3 and len(set(B))==3:
+            #a2とb2が最大か最小かが必要。
+            #Aの場合
+            kado_A = (A[1] == max(A) or A[1] == min(A))
+            kado_B = (B[1] == max(B) or B[1] == min(B))
+            
