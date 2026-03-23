@@ -12,8 +12,7 @@
 #標準入力を受け取る。
 cards = map(int, input().split())
 
-#
-counts = [0]*13
+counts = [0]*14
 for num in cards:
     counts[num] += 1
 
@@ -38,4 +37,7 @@ elif two_count==1:
     print("ONE PAIR")
 else:
     print("NO HAND")
+    
+    
+    
     
