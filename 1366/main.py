@@ -17,8 +17,8 @@ A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
 #出力できるか試す。→出力された。
-print(A)
-print(B)
+
+
 
 #二重ループを作成してfor文を入力したい。
 for i in range(3):
@@ -39,8 +39,8 @@ for i in range(3):
                 print("Yes")
                 exit()
 
-#リストを元の順番に戻しておく。
-A[i], B[j] = B[j], A[i]
+        #リストを元の順番に戻しておく。
+        A[i], B[j] = B[j], A[i] #ループの中に入ってなかった気がした。
 
-#門松列でなかったら、Noと出力する。
+#門松列でなかったら、Noと出力する。m
 print("No")
