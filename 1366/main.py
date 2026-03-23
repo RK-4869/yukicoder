@@ -12,15 +12,16 @@
 # ---出力---
 # 門松列が可能ならYes、不可能ならNoと出力すること。
 
-#まずそれぞれの整数を標準入力に変換してみる。
-a1, a2, a3 = map(int, input().split())
-b1, b2, b3 = map(int, input().split())
+#まずそれぞれの整数を標準入力に変換してみる。→それぞれをA, Bにおく。listを使用した。
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 
 #出力できるか試す。→出力された。
-print(a1, a2, a3)
-print(b1, b2, b3)
+print(A)
+print(B)
 
+#二重ループを作成してfor文を入力したい。
 for i in range(3):
     for j in range(3):
-        
-
+        #AとBの左右を入れ替えてみる。
+        A[i], B[j] = B[j], A[i]
