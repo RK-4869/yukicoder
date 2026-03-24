@@ -12,19 +12,15 @@
 N = int(input())
 #print(N) 
 
+#最初から1枚を持っていることを入力
+first = 1
 #ビスケットを叩いた回数のカウンタ
 hit_count = 0
-#定義からNは1より大きい
-while N > 1:
-    #もしNが偶数なら叩いたあとになるので割り切れる指揮を入れる。
-    if N % 2 == 0:
-        #枚数を半分にする。
-        N = N // 2
-        hit_count += 1
-    
-    #もしNが奇数の場合、
-    else:
-        #枚数から1ひく。
-        N = N -1
+#定義からNはfirst=1より大きい
+while N > first:
+    #手持ちを1回叩くごとに倍数になるとすると
+    first = first * 2
+    #叩く回数を1増やす。
+    hit_count += 1
 #hit_countを出力
 print(hit_count)
