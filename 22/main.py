@@ -26,9 +26,17 @@
 N, K = map(int, input().split())
 S = input()
 
+#括弧の片方を変数で後付けする。
+target_kakko = K -1
+
 #括弧の場所を保存するリストを作成する
 kakko = []
 
 #文字列を1文字ずつ確認していく。
 for i in range(N):
-    
+    if S[i] == "(":
+        kakko.append(i)
+    else:
+        left_kakko = kakko.pop()
+        right_kakko = i
+
