@@ -39,4 +39,11 @@ for i in range(N):
     else:
         left_kakko = kakko.pop()
         right_kakko = i
-
+        
+        #もしペアを取り出したどちらかが探しているKであれば片方を出力する、
+        if left_kakko == target_kakko:
+            print(right_kakko +1)
+            break
+        elif right_kakko == target_kakko:
+            print(left_kakko+1)
+            break
