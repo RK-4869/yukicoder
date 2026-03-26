@@ -25,3 +25,13 @@ W.sort()
 total_width = 0
 #また個数カウンタcountとする。
 count = 0
+
+#並び替えた後を1つずつ見ていく
+for width in W:
+    if total_width + width <= L:
+        total_width = total_width + width
+        count = count + 1
+    else:
+        break
+
+print(count)
