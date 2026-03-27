@@ -11,3 +11,18 @@
 #まず、自分の手Nと相手の手Kを受け取る。
 N, K = map(int, input().split())
 
+# #ぐー、ちょき、ぱーをそれぞれ0,1,2とする。
+# "ぐー" == 0
+# "ちょき" == 1
+# "ぱー" == 2
+#必要なさそう。
+
+#自分が勝つパターンを書いていくと、
+if N == K:
+    print("Drew")
+elif (N == 0 and K == 1) or (N == 1 and K == 2) or (N == 2 and K == 0):
+    print("Won")
+else:
+    print("Lost")
+    
+    
