@@ -16,9 +16,18 @@ N = int(input())
 A = 1
 B = 2
 #と置ける。
-#また、Nが1回目から3回目まで表すと、(1):a, b = 2, 3。　(2):a, b = 3, 5になるので、for文として双六Nマスから-2する分だけ繰り返すと、
-for i in range(N - 2):
-    #A, Bの関係はを記述すると。
-    A, B = B, A + B
-#また、ターンでは1,2マスしか進めないので、N=1だとrange(1-2)でループしない。N=2だとrange(2-2)でループしない。
+
+#A, Bの関係はを記述すると。
+#Nマスあるうち、Nが1マスと2マスの時の条件分岐ができそうなので、
+if N == 1:
+    answer = 1
+elif N == 2:
+    answer = 2
+else:
+    for i in range(N-2):
+        A,B = B, A+B
+    answer = B
+
+#answerを出力してみる。
+print(answer)
 
